@@ -162,7 +162,7 @@ rules: {
     'react/no-is-mounted': 'warn',
     'react/no-unused-prop-types': 'warn',
     'react/prefer-es6-class': 'warn',
-    'react/prefer-stateless-function': 'warn',
+    // 'react/prefer-stateless-function': 'warn',
     'react/prop-types': 'warn',
     'react/react-in-jsx-scope': 'warn',
     'react/require-render-return': 'warn',
