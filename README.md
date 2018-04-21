@@ -16,7 +16,7 @@ The package can be installed via NPM:
 npm install react-modern-datepicker --save
 ```
 
-This package doesn't come with any dependency other than Moment.js. Threfore, You’ll need to install React, PropTypes separately since those dependencies aren’t included in the package. Below is a simple example of how to use the ModernDatepicker in a React view.
+This package doesn't come with any dependency other than Moment.js & styled-components. Threfore, You’ll need to install React, PropTypes separately since those dependencies aren’t included in the package. Below is a simple example of how to use the ModernDatepicker in a React view.
 
 ```js
 import React from 'react';
@@ -66,7 +66,7 @@ The default `format` prop is `DD-MM-YYYY` if not specified.
 Compatible with the latest version of react i.e v16.3.2
 
 Latest compatible versions:
-- React 15.5 or newer: All above React-datepicker v.0.1.0
+- React 15.5 or newer: All above React-datepicker v.0.2.0
 
 ### Browser Support
 
