@@ -1,7 +1,12 @@
 # react-modern-datepicker
 A modern date picker for react library
 
-![](https://cloud.githubusercontent.com/assets/1412392/5339491/c40de124-7ee1-11e4-9f07-9276e2545f27.png)
+![react-modern-datepicker](https://github.com/talentedandrew/react-modern-datepicker/blob/master/dateview.jpg "react-modern-datepicker date view")
+
+![react-modern-datepicker](https://github.com/talentedandrew/react-modern-datepicker/blob/master/monthview.jpg "react-modern-datepicker month view")
+
+![react-modern-datepicker](https://github.com/talentedandrew/react-modern-datepicker/blob/master/yearview.jpg "react-modern-datepicker year view")
+
 
 ## Installation
 
@@ -39,6 +44,7 @@ class Example extends React.Component {
     return <ModernDatepicker 
           date={this.state.startDate} 
           format={'DD-MM-YYYY'} 
+          showBorder        
           onChange={(date) => this.handleChange(date)}
           placeholder={'Select a date'}
         />
