@@ -20,7 +20,7 @@
     "react-datepicker"
   ],
   "author": "Anurag Veekancheri",
-  "license": "ISC",
+  "license": "Apache License",
   "bugs": {
     "url": "https://github.com/talentedandrew/react-modern-datepicker/issues"
   },
