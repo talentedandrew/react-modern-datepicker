@@ -23,8 +23,6 @@ import React from 'react';
 import ModernDatepicker from 'react-modern-datepicker';
 import moment from 'moment';
 
-import 'react-datepicker/dist/react-datepicker.css';
-
 class Example extends React.Component {
   constructor (props) {
     super(props)
