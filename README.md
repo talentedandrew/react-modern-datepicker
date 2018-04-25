@@ -52,12 +52,26 @@ class Example extends React.Component {
 
 ## Configuration
 
-The most basic use of the DatePicker can be described with:
+The most basic use of the ModernDatepicker can be described with:
 
 ```js
 <ModernDatepicker date={this.state.date} onChange={this.handleChange} />
 ```
+
 The default `format` prop is `DD-MM-YYYY` if not specified.
+
+## Options
+
+The following are the props that you can pass to `ModernDatepicker` Component :
+
+| props        | Default           | Optional | Description  |
+| ------------- |:-------------:| -----| -----|
+| date      | null | true | This prop takes the date that you want to show |
+| format      | 'DD-MM-YYYY'      | true |   This prop takes the format you want to set for your date |
+| showBorder | false      | true |    This prop takes a boolean to show or not to show borders around the input |
+| onChange | null      | false |    This props takes a function, with the date passed to its parameters |
+| placeholder | null      | true |    This props takes a string to show when no date is selected |
+
 
 ## Compatibility
 
