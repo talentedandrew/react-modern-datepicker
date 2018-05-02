@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModernDatepicker component ModernDatepicker: renders correctly 1`] = `
+<div
+  className="sc-htpNat gsWYHL"
+  onBlur={[Function]}
+>
+  <input
+    className="sc-bdVaJa hhQVqO"
+    onChange={[Function]}
+    onFocus={[Function]}
+    placeholder="Select a date"
+    type="text"
+    value="25-04-2018"
+  />
+</div>
+`;

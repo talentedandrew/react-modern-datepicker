@@ -50,6 +50,7 @@ class Example extends React.Component {
 }
 ```
 
+#Adding your own CSS 
 
 You can also pass your own css to style the input element.The following example shows how to style the input element using your own css.
 
@@ -112,6 +113,52 @@ class Example extends React.Component {
   }
 }
 ```
+#Passing min and max date
+
+You can also pass min and max date to the component.The following example shows how to pass min and max date.
+
+```js
+import React from 'react';
+import ModernDatepicker from 'react-modern-datepicker';
+import moment from 'moment';
+import './App.css';
+import icon from '../assets/icon.png'; // if you want to show an icon
+
+
+
+class Example extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      startDate: moment()
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(date) {
+    this.setState({
+      startDate: date
+    });
+  }
+
+  render() {
+    return <ModernDatepicker 
+          date={this.state.startDate} 
+          format={'DD-MM-YYYY'} 
+          showBorder        
+          className='color'
+          icon={icon}
+          maxDate={moment().add('1','days')}
+          minDate={moment().subtract('2','days')}
+          onChange={(date) => this.handleChange(date)}
+          placeholder={'Select a date'}
+        />
+  }
+}
+```
+If you pass invalid min or max date, it will show the corresponding error.
+
+
 
 ## Configuration
 
@@ -136,6 +183,8 @@ The following are the props that you can pass to `ModernDatepicker` Component :
 | placeholder | null      | true |    This props takes a string to show when no date is selected |
 | className | null      | true |    This props takes any external css/scss you want to use to override the default one. |
 | icon | null      | true |    This props takes an image you want to add as an icon. |
+| maxDate | null      | true |    This props takes the maximum date. (expects you to provide the same format as the date) |
+| minDate | null      | true |    This props takes the minimum date. (expects you to provide the same format as the date)|
 
 ## Compatibility
 
