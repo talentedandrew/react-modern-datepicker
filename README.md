@@ -147,6 +147,7 @@ class Example extends React.Component {
           format={'DD-MM-YYYY'} 
           showBorder        
           className='color'
+          id="someId"
           icon={icon}
           maxDate={moment().add('1','days')}
           minDate={moment().subtract('2','days')}
@@ -185,6 +186,8 @@ The following are the props that you can pass to `ModernDatepicker` Component :
 | icon | null      | true |    This props takes an image you want to add as an icon. |
 | maxDate | null      | true |    This props takes the maximum date. (expects you to provide the same format as the date) |
 | minDate | null      | true |    This props takes the minimum date. (expects you to provide the same format as the date)|
+| id | null      | true |    This props takes the id as a string, that you want to pass to the input element|
+
 
 ## Compatibility
 
