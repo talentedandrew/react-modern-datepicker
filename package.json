@@ -1,6 +1,6 @@
 {
   "name": "react-modern-datepicker",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "A modern date picker for react library",
   "main": "build/index.js",
   "scripts": {
