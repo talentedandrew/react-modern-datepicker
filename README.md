@@ -76,6 +76,8 @@ You can also pass your own css to style the input element.The following example 
   }
 ```
 
+`./App.js`
+
 ```js
 import React from 'react';
 import ModernDatepicker from 'react-modern-datepicker';
@@ -160,6 +162,89 @@ class Example extends React.Component {
 If you pass invalid min or max date, it will show the corresponding error.
 
 
+#Passing Language and Label
+
+You can also pass language and label to the component.The following example shows how to pass language and label, using props `lang` and `label`.
+
+`./App.css`
+
+```css
+//Please  note that, for this class to take the precedence over the 
+//default css, we should repeat the class name like below (instead of .color, we are 
+// using .color.color)
+.color.color {
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 10px 10px 5px;
+    border-bottom: 1px solid #ebebeb!important;
+    border: none;
+    box-sizing: border-box;
+    margin-top: 22px;
+    box-shadow: none;
+    font-family: Open Sans,sans-serif;
+  }
+.label.label {
+  font-size: 12px;
+}
+.icon.icon {
+  bottom: 10px;
+}
+
+```
+
+`./App.js`
+
+```js
+import React from 'react';
+import ModernDatepicker from 'react-modern-datepicker';
+import moment from 'moment';
+import './App.css';
+import icon from '../assets/icon.png'; // if you want to show an icon
+
+
+
+class Example extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      startDate: moment()
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(date) {
+    this.setState({
+      startDate: date
+    });
+  }
+
+  render() {
+    return <ModernDatepicker 
+          date={this.state.startDate} 
+          format={'DD-MM-YYYY'} 
+          showBorder        
+          className='color'
+          id="someId"
+          icon={icon}
+          iconClass='icon'
+          lang='fr'
+          label='Date'
+          labelClass='label'
+          maxDate={moment().add('1','days')}
+          minDate={moment().subtract('2','days')}
+          onChange={(date) => this.handleChange(date)}
+          placeholder={'Select a date'}
+        />
+  }
+}
+```
+If you pass invalid min or max date, it will show the corresponding error.
+
+
+
 
 ## Configuration
 
@@ -184,9 +269,14 @@ The following are the props that you can pass to `ModernDatepicker` Component :
 | placeholder | null      | true |    This props takes a string to show when no date is selected |
 | className | null      | true |    This props takes any external css/scss you want to use to override the default one. |
 | icon | null      | true |    This props takes an image you want to add as an icon. |
+| iconClass | null      | true |    This props takes any external css/scss, that you want to use to style your icon|
 | maxDate | null      | true |    This props takes the maximum date. (expects you to provide the same format as the date) |
 | minDate | null      | true |    This props takes the minimum date. (expects you to provide the same format as the date)|
 | id | null      | true |    This props takes the id as a string, that you want to pass to the input element|
+| label | null      | true |    This props takes the label as a string, that you want to show for the input element|
+| labelClass | null      | true |    This props takes any external css/scss, that you want to use to style your label|
+| lang | en      | true |    This props takes the language as a string, that you want to show in the calendar |
+
 
 
 ## Compatibility
