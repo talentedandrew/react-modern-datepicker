@@ -7,6 +7,9 @@ A modern date picker for react library
 
 ![react-modern-datepicker](https://github.com/talentedandrew/react-modern-datepicker/blob/master/yearview.jpg "react-modern-datepicker year view")
 
+![react-modern-datepicker](https://github.com/talentedandrew/react-modern-datepicker/blob/master/modernDatepicker.png "react-modern-datepicker year view")
+
+
 
 ## Installation
 
