@@ -53,7 +53,7 @@ class Example extends React.Component {
 }
 ```
 
-#Adding your own CSS 
+### Adding your own CSS 
 
 You can also pass your own css to style the input element.The following example shows how to style the input element using your own css.
 
@@ -118,7 +118,7 @@ class Example extends React.Component {
   }
 }
 ```
-#Passing min and max date
+### Passing min and max date
 
 You can also pass min and max date to the component.The following example shows how to pass min and max date.
 
@@ -165,7 +165,7 @@ class Example extends React.Component {
 If you pass invalid min or max date, it will show the corresponding error.
 
 
-#Passing Language and Label
+### Passing Language and Label
 
 You can also pass language and label to the component.The following example shows how to pass language and label, using props `lang` and `label`.
 
