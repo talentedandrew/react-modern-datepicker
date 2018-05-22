@@ -9,6 +9,7 @@
     "build:watch": "babel lib -w -d build",
     "lint": "eslint lib/**; exit 0",
     "lint:watch": "esw -w lib/**",
+    "lint:fix": "eslint lib/** --fix",
     "prepublish": "npm run build"
   },
   "repository": {
