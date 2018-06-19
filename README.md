@@ -279,8 +279,8 @@ The following are the props that you can pass to `ModernDatepicker` Component :
 | label | null      | true |    This props takes the label as a string, that you want to show for the input element|
 | labelClass | null      | true |    This props takes any external css/scss, that you want to use to style your label|
 | lang | en      | true |    This props takes the language as a string, that you want to show in the calendar |
-
-
+| onFocus | null      | true |    This props takes the function to call on onFocus event |
+| onBlur | null      | true |    This props takes the function to call on onBlur event |
 
 ## Compatibility
 
