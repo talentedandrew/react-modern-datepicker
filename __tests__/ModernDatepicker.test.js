@@ -3,14 +3,24 @@ import ModernDatepicker from '../build/components/ModernDatepicker';
 import renderer from 'react-test-renderer';
 import { mount, configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import moment from 'moment';
+// import moment from 'moment';
+import dayjs from "dayjs";
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+import isBetween from 'dayjs/plugin/isBetween';
+import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
+import isSameOrBefore from 'dayjs/plugin/isSameOrBefore';
+
+dayjs.extend(customParseFormat);
+dayjs.extend(isBetween);
+dayjs.extend(isSameOrAfter);
+dayjs.extend(isSameOrBefore);
 configure({ adapter: new Adapter() });
 
 describe('ModernDatepicker component', () => {
   it('ModernDatepicker: renders correctly', () => {
     const onChange = jest.fn();
     const tree = renderer.create(<ModernDatepicker
-      date={'25-4-2018'} 
+      date={'25-04-2018'} 
       format={'DD-MM-YYYY'} 
       onChange={onChange}
       placeholder={'Select a date'}
@@ -25,7 +35,7 @@ test('ModernDatepicker Component calls onChange when date is changed, string dat
   const onChange = jest.fn();
   const wrapper = shallow(
     <ModernDatepicker 
-      date={'25-4-2018'} 
+      date={'25-04-2018'} 
       format={'DD-MM-YYYY'} 
       onChange={onChange}
       placeholder={'Select a date'}
@@ -49,7 +59,7 @@ test('ModernDatepicker Component calls onChange when date is changed, javascript
   const onChange = jest.fn();
   const wrapper = shallow(
     <ModernDatepicker 
-      date={new Date()} 
+      date={dayjs(new Date()).format('DD-MM-YYYY')} 
       format={'DD-MM-YYYY'} 
       onChange={onChange}
       placeholder={'Select a date'}
@@ -59,20 +69,20 @@ test('ModernDatepicker Component calls onChange when date is changed, javascript
   const componentInstance = wrapper.instance();
   // when date is changed
   componentInstance.handleDateChange(20, 'date');
-  expect(onChange).toBeCalledWith(moment().date(20).format('DD-MM-YYYY'));
+  expect(onChange).toBeCalledWith(dayjs().date(20).format('DD-MM-YYYY'));
   //when month is changed
   componentInstance.handleDateChange(5, 'month');
-  expect(onChange).toBeCalledWith(moment().date(20).month(5).format('DD-MM-YYYY'));
+  expect(onChange).toBeCalledWith(dayjs().date(20).month(5).format('DD-MM-YYYY'));
   //when year is changed
   componentInstance.handleDateChange(2017, 'year');
-  expect(onChange).toBeCalledWith(moment().date(20).month(5).year(2017).format('DD-MM-YYYY'));
+  expect(onChange).toBeCalledWith(dayjs().date(20).month(5).year(2017).format('DD-MM-YYYY'));
 });
 
 test('ModernDatepicker Component calls onChange when date is changed, moment date object is passed', () => {
   const onChange = jest.fn();
   const wrapper = shallow(
     <ModernDatepicker 
-      date={moment()} 
+      date={dayjs()} 
       format={'DD-MM-YYYY'} 
       onChange={onChange}
       placeholder={'Select a date'}
@@ -82,13 +92,13 @@ test('ModernDatepicker Component calls onChange when date is changed, moment dat
   const componentInstance = wrapper.instance();
   // when date is changed
   componentInstance.handleDateChange(20, 'date');
-  expect(onChange).toBeCalledWith(moment().date(20).format('DD-MM-YYYY'));
+  expect(onChange).toBeCalledWith(dayjs().date(20).format('DD-MM-YYYY'));
   //when month is changed
   componentInstance.handleDateChange(5, 'month');
-  expect(onChange).toBeCalledWith(moment().date(20).month(5).format('DD-MM-YYYY'));
+  expect(onChange).toBeCalledWith(dayjs().date(20).month(5).format('DD-MM-YYYY'));
   //when year is changed
   componentInstance.handleDateChange(2017, 'year');
-  expect(onChange).toBeCalledWith(moment().date(20).month(5).year(2017).format('DD-MM-YYYY'));
+  expect(onChange).toBeCalledWith(dayjs().date(20).month(5).year(2017).format('DD-MM-YYYY'));
 });
 
 test('ModernDatepicker Component calls onChange when date is changed, date is not passed', () => {
@@ -104,13 +114,13 @@ test('ModernDatepicker Component calls onChange when date is changed, date is no
   const componentInstance = wrapper.instance();
   // when date is changed
   componentInstance.handleDateChange(20, 'date');
-  expect(onChange).toBeCalledWith(moment().date(20).format('DD-MM-YYYY'));
+  expect(onChange).toBeCalledWith(dayjs().date(20).format('DD-MM-YYYY'));
   //when month is changed
   componentInstance.handleDateChange(5, 'month');
-  expect(onChange).toBeCalledWith(moment().date(20).month(5).format('DD-MM-YYYY'));
+  expect(onChange).toBeCalledWith(dayjs().date(20).month(5).format('DD-MM-YYYY'));
   //when year is changed
   componentInstance.handleDateChange(2017, 'year');
-  expect(onChange).toBeCalledWith(moment().date(20).month(5).year(2017).format('DD-MM-YYYY'));
+  expect(onChange).toBeCalledWith(dayjs().date(20).month(5).year(2017).format('DD-MM-YYYY'));
 });
 
 test('ModernDatepicker Component calls onChange when date is changed, invalid date passed', () => {
@@ -167,8 +177,8 @@ test('ModernDatepicker Component calls onChange when date is changed, same min a
   const wrapper = shallow(
     <ModernDatepicker 
       format={'DD-MM-YYYY'} 
-      maxDate={'2-2-2018'}
-      minDate={'2-2-2018'}
+      maxDate={'02-02-2018'}
+      minDate={'02-02-2018'}
       onChange={onChange}
       placeholder={'Select a date'}
       showBorder
@@ -184,8 +194,8 @@ test('ModernDatepicker Component calls onChange when date is changed, invalid mi
   const wrapper = shallow(
     <ModernDatepicker 
       format={'DD-MM-YYYY'} 
-      maxDate={'2-2-2018'}
-      minDate={'22-2-2018'}
+      maxDate={'02-02-2018'}
+      minDate={'22-02-2018'}
       onChange={onChange}
       placeholder={'Select a date'}
       showBorder
@@ -200,10 +210,10 @@ test('ModernDatepicker Component calls onChange when date is changed, moment dat
   const onChange = jest.fn();
   const wrapper = shallow(
     <ModernDatepicker 
-      date={moment()} 
+      date={dayjs()} 
       format={'DD-MM-YYYY'} 
-      maxDate={moment().add('1','days')}
-      minDate={moment().subtract('2','days')}
+      maxDate={dayjs().add('1','day')}
+      minDate={dayjs().subtract('2','day')}
       onChange={onChange}
       placeholder={'Select a date'}
       showBorder
@@ -212,11 +222,11 @@ test('ModernDatepicker Component calls onChange when date is changed, moment dat
   const componentInstance = wrapper.instance();
   // when date is changed
   componentInstance.handleDateChange(20, 'date');
-  expect(onChange).toBeCalledWith(moment().date(20).format('DD-MM-YYYY'));
+  expect(onChange).toBeCalledWith(dayjs().date(20).format('DD-MM-YYYY'));
   //when month is changed
   componentInstance.handleDateChange(5, 'month');
-  expect(onChange).toBeCalledWith(moment().date(20).month(5).format('DD-MM-YYYY'));
+  expect(onChange).toBeCalledWith(dayjs().date(20).month(5).format('DD-MM-YYYY'));
   //when year is changed
   componentInstance.handleDateChange(2017, 'year');
-  expect(onChange).toBeCalledWith(moment().date(20).month(5).year(2017).format('DD-MM-YYYY'));
+  expect(onChange).toBeCalledWith(dayjs().date(20).month(5).year(2017).format('DD-MM-YYYY'));
 });

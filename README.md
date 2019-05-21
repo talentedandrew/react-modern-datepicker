@@ -154,8 +154,8 @@ class Example extends React.Component {
           className='color'
           id="someId"
           icon={icon}
-          maxDate={moment().add('1','days')}
-          minDate={moment().subtract('2','days')}
+          maxDate={moment().add('1','day')}
+          minDate={moment().subtract('2','day')}
           onChange={(date) => this.handleChange(date)}
           placeholder={'Select a date'}
         />
@@ -236,8 +236,8 @@ class Example extends React.Component {
           lang='fr'
           label='Date'
           labelClass='label'
-          maxDate={moment().add('1','days')}
-          minDate={moment().subtract('2','days')}
+          maxDate={moment().add('1','day')}
+          minDate={moment().subtract('2','day')}
           onChange={(date) => this.handleChange(date)}
           placeholder={'Select a date'}
         />

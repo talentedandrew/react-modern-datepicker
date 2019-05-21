@@ -7,7 +7,6 @@ exports[`ModernDatepicker component ModernDatepicker: renders correctly 1`] = `
 >
   <input
     className="sc-bwzfXH kGGIis"
-    id={undefined}
     onChange={[Function]}
     onFocus={[Function]}
     placeholder="Select a date"
