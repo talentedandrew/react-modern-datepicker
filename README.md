@@ -1,6 +1,6 @@
 # react-modern-datepicker
 
-A modern date picker for react library. (Now customizable)
+A modern date picker for react library. (Now customizable) . Built using [React](https://github.com/facebook/react), [Dayjs](https://github.com/iamkun/dayjs) and [styled-components](https://github.com/styled-components/styled-components)
 
 <p float="left">
   <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/v8/assets/dateview.png" width="250" alt="Date view"/>
@@ -68,6 +68,12 @@ class Example extends React.Component {
 	}
 }
 ```
+
+## Important Note
+
+The previous versions of this library ( < v0.8) were using `momentjs` as a dependency which has been replaced by `dayjs` (mostly due to the bundle size). Since `momentjs` has been removed, the support for locale i.e `lang` has also been removed.
+
+
 
 ### Adding your own theme
 

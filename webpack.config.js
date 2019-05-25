@@ -39,8 +39,5 @@ module.exports = {
 	},
 	plugins: [
 		new BundleAnalyzerPlugin(),
-		// new webpack.optimize.DedupePlugin(),
-		// new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /de|fr|hu/)
-		// new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
 	],
 };
