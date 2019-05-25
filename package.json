@@ -6,6 +6,8 @@
   "scripts": {
     "test": "jest",
     "build-old": "babel lib -d build",
+    "clean": "rm -r dist && mkdir dist",
+    "prebuild": "npm run clean",
     "build": "webpack",
     "build:watch": "babel lib -w -d build",
     "lint": "eslint lib/**; exit 0",

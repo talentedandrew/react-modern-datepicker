@@ -1,5 +1,7 @@
 # react-modern-datepicker
 
+[![npm (scoped)](https://img.shields.io/badge/npm-v1.0.0-success.svg)](https://www.npmjs.com/package/react-modern-datepicker)
+
 A modern date picker for react library. (Now customizable) . Built using [React](https://github.com/facebook/react), [Dayjs](https://github.com/iamkun/dayjs) and [styled-components](https://github.com/styled-components/styled-components)
 
 <p float="left">
@@ -38,13 +40,12 @@ This package doesn't come with any dependency other than `dayjs` (momentjs depre
 ```js
 import React from 'react';
 import ModernDatepicker from 'react-modern-datepicker';
-import dayjs from 'dayjs';
 
 class Example extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			startDate: dayjs(),
+			startDate: '',
 		};
 		this.handleChange = this.handleChange.bind(this);
 	}
@@ -259,7 +260,7 @@ The following are the props that you can pass to `ModernDatepicker` Component :
 
 | props              |   Default    | Optional | Description                                                                                                         |
 | ------------------ | :----------: | -------- | ------------------------------------------------------------------------------------------------------------------- |
-| date               |     null     | true     | This prop takes the date that you want to show                                                                      |
+| date               |     null     | true     | This prop takes the date that you want to show, in string format or as an instance of dayjs                                                                     |
 | format             | 'DD-MM-YYYY' | true     | This prop takes the format you want to set for your date                                                            |
 | showBorder         |    false     | true     | This prop takes a boolean to show or not to show borders around the input                                           |
 | onChange           |     null     | false    | This props takes a function, with the date passed to its parameters                                                 |
