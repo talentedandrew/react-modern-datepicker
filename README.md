@@ -1,13 +1,18 @@
 # react-modern-datepicker
-A modern date picker for react library
+A modern date picker for react library. (Now customizable)
 
-![react-modern-datepicker](https://github.com/talentedandrew/react-modern-datepicker/blob/master/dateview.jpg "react-modern-datepicker date view")
+<img align="left" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/dateview.jpg?sanitize=true&raw=true" alt="Date view" title="Angular" hspace="20"/>
+<img align="left" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/monthview.jpg?sanitize=true&raw=true" alt="Month View" title="Bootstrap" hspace="20"/>
+<img align="left" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/yearview.jpg?sanitize=true&raw=true" title="Year View" hspace="20"/>
+<br/><br/><br/><br/><br/>
+
+<!-- ![react-modern-datepicker](https://github.com/talentedandrew/react-modern-datepicker/blob/master/dateview.jpg "react-modern-datepicker date view")
 
 ![react-modern-datepicker](https://github.com/talentedandrew/react-modern-datepicker/blob/master/monthview.jpg "react-modern-datepicker month view")
 
 ![react-modern-datepicker](https://github.com/talentedandrew/react-modern-datepicker/blob/master/yearview.jpg "react-modern-datepicker year view")
 
-![react-modern-datepicker](https://github.com/talentedandrew/react-modern-datepicker/blob/master/modernDatepicker.png "react-modern-datepicker year view")
+![react-modern-datepicker](https://github.com/talentedandrew/react-modern-datepicker/blob/master/modernDatepicker.png "react-modern-datepicker year view") -->
 
 
 
@@ -19,18 +24,18 @@ The package can be installed via NPM:
 npm install react-modern-datepicker --save
 ```
 
-This package doesn't come with any dependency other than Moment.js & styled-components. Threfore, You’ll need to install React, PropTypes separately since those dependencies aren’t included in the package. Below is a simple example of how to use the ModernDatepicker in a React view.
+This package doesn't come with any dependency other than `dayjs` (momentjs deprecated) & `styled-components`. Threfore, You’ll need to install React, PropTypes separately since those dependencies aren’t included in the package. Below is a simple example of how to use the ModernDatepicker in a React view.
 
 ```js
 import React from 'react';
 import ModernDatepicker from 'react-modern-datepicker';
-import moment from 'moment';
+import dayjs from 'dayjs';
 
 class Example extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      startDate: moment()
+      startDate: dayjs()
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -52,6 +57,56 @@ class Example extends React.Component {
   }
 }
 ```
+
+### Adding your own theme
+
+You can now add your own theme to customize the ModernDatepicker.You can do this with the help of `primaryColor`, `secondaryColor`, `primaryTextColor`, `secondaryTextColor` props. The following example shows how to customize the ModernDatepicker.
+
+```js
+import React from 'react';
+import ModernDatepicker from 'react-modern-datepicker';
+import dayjs from 'dayjs';
+import './App.css';
+import icon from '../assets/icon.png'; // if you want to show an icon
+
+
+
+class Example extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      startDate: dayjs()
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(date) {
+    this.setState({
+      startDate: date
+    });
+  }
+
+  render() {
+    return <ModernDatepicker 
+          date={this.state.startDate} 
+          format={'DD-MM-YYYY'} 
+          showBorder        
+          className='color'
+          id="someId"
+          icon={icon}
+          maxDate={dayjs().add('1','day')}
+          minDate={dayjs().subtract('2','day')}
+          onChange={(date) => this.handleChange(date)}
+          placeholder={'Select a date'}
+          primaryColor = {'#d9b44a'}
+					secondaryColor={'#75b1a9'}
+					primaryTextColor={'#4f6457'}
+          secondaryTextColor={'#acd0c0'}
+        />
+  }
+}
+```
+Please note that these props (`primaryColor`, `secondaryColor`, `primaryTextColor`, `secondaryTextColor`) , takes a valid color scheme as a string.(like HEX or RGB format). 
 
 ### Adding your own CSS 
 
@@ -84,7 +139,7 @@ You can also pass your own css to style the input element.The following example 
 ```js
 import React from 'react';
 import ModernDatepicker from 'react-modern-datepicker';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import './App.css';
 import icon from '../assets/icon.png'; // if you want to show an icon
 
@@ -94,7 +149,7 @@ class Example extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      startDate: moment()
+      startDate: dayjs()
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -125,7 +180,7 @@ You can also pass min and max date to the component.The following example shows 
 ```js
 import React from 'react';
 import ModernDatepicker from 'react-modern-datepicker';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import './App.css';
 import icon from '../assets/icon.png'; // if you want to show an icon
 
@@ -135,7 +190,7 @@ class Example extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      startDate: moment()
+      startDate: dayjs()
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -154,8 +209,8 @@ class Example extends React.Component {
           className='color'
           id="someId"
           icon={icon}
-          maxDate={moment().add('1','day')}
-          minDate={moment().subtract('2','day')}
+          maxDate={dayjs().add('1','day')}
+          minDate={dayjs().subtract('2','day')}
           onChange={(date) => this.handleChange(date)}
           placeholder={'Select a date'}
         />
@@ -165,86 +220,10 @@ class Example extends React.Component {
 If you pass invalid min or max date, it will show the corresponding error.
 
 
-### Passing Language and Label
+### <del> Passing Language and Label </del> (This feature has been deprecated as of now.)
 
-You can also pass language and label to the component.The following example shows how to pass language and label, using props `lang` and `label`.
+<del>You can also pass language and label to the component.The following example shows how to pass language and label, using props `lang` and `label`.</del>
 
-`./App.css`
-
-```css
-//Please  note that, for this class to take the precedence over the 
-//default css, we should repeat the class name like below (instead of .color, we are 
-// using .color.color)
-.color.color {
-    border-radius: 0;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 10px 10px 10px 5px;
-    border-bottom: 1px solid #ebebeb!important;
-    border: none;
-    box-sizing: border-box;
-    margin-top: 22px;
-    box-shadow: none;
-    font-family: Open Sans,sans-serif;
-  }
-.label.label {
-  font-size: 12px;
-}
-.icon.icon {
-  bottom: 10px;
-}
-
-```
-
-`./App.js`
-
-```js
-import React from 'react';
-import ModernDatepicker from 'react-modern-datepicker';
-import moment from 'moment';
-import './App.css';
-import icon from '../assets/icon.png'; // if you want to show an icon
-
-
-
-class Example extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      startDate: moment()
-    };
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(date) {
-    this.setState({
-      startDate: date
-    });
-  }
-
-  render() {
-    return <ModernDatepicker 
-          date={this.state.startDate} 
-          format={'DD-MM-YYYY'} 
-          showBorder        
-          className='color'
-          id="someId"
-          icon={icon}
-          iconClass='icon'
-          lang='fr'
-          label='Date'
-          labelClass='label'
-          maxDate={moment().add('1','day')}
-          minDate={moment().subtract('2','day')}
-          onChange={(date) => this.handleChange(date)}
-          placeholder={'Select a date'}
-        />
-  }
-}
-```
-If you pass invalid min or max date, it will show the corresponding error.
 
 
 
@@ -281,15 +260,19 @@ The following are the props that you can pass to `ModernDatepicker` Component :
 | lang | en      | true |    This props takes the language as a string, that you want to show in the calendar |
 | onFocus | null      | true |    This props takes the function to call on onFocus event |
 | onBlur | null      | true |    This props takes the function to call on onBlur event |
+| primaryColor | null      | true |    This props takes the color code in string format, and applies it to the selected date section |
+| secondaryColor | null      | true |    This props takes the color code in string format, and applies it to the body of the datepicker  |
+| primaryTextColor | null      | true |    This props takes the color code in string format, and applies it to the text of the body of the datepicker   |
+| secondaryTextColor | null      | true |    This props takes the color code in string format, and applies it to the selected text of the body of the datepicker   |
 
 ## Compatibility
 
 ### React
 
-Compatible with the latest version of react i.e v16.3.2
+Compatible with the latest version of react i.e v16.X.X
 
 Latest compatible versions:
-- React 15.5 or newer: All above React-datepicker v.0.2.0
+- React 16.0.0 or newer: All above React-datepicker v.0.2.0
 
 ### Browser Support
 

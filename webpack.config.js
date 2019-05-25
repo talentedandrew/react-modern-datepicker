@@ -1,26 +1,46 @@
-var path = require("path");
-var webpack = require("webpack");
+const path = require('path');
+const webpack = require('webpack');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
-  mode: "development",
-  entry: "./lib/index.js",
-  output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "main.js"
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
-      }
-    ]
-  },
-  plugins: [
-    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /de|fr|hu/)
-    // new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
-  ]
+	mode: 'production',
+	entry: './lib/index.js',
+	output: {
+		path: path.resolve(__dirname, 'dist'),
+		filename: 'main.js',
+		library: 'ModernDatepicker',
+		libraryTarget: 'umd',
+		globalObject: 'this'
+	},
+	module: {
+		rules: [
+			{
+				test: /\.(js|jsx)$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader',
+				},
+			},
+		],
+	},
+	externals: {
+		react: {
+			root: 'React',
+			commonjs2: 'react',
+			commonjs: 'react',
+			amd: 'react',
+		},
+		'react-dom': {
+			root: 'ReactDOM',
+			commonjs2: 'react-dom',
+			commonjs: 'react-dom',
+			amd: 'react-dom',
+		},
+	},
+	plugins: [
+		new BundleAnalyzerPlugin(),
+		// new webpack.optimize.DedupePlugin(),
+		// new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /de|fr|hu/)
+		// new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
+	],
 };
