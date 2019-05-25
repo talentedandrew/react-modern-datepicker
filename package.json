@@ -13,7 +13,8 @@
     "lint": "eslint lib/**; exit 0",
     "lint:watch": "esw -w lib/**",
     "lint:fix": "eslint lib/** --fix",
-    "webpack-build-prod": "webpack"
+    "prepublish": "npm run test",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",

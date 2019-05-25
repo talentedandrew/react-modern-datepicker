@@ -5,9 +5,9 @@
 A modern date picker for react library. (Now customizable) . Built using [React](https://github.com/facebook/react), [Dayjs](https://github.com/iamkun/dayjs) and [styled-components](https://github.com/styled-components/styled-components)
 
 <p float="left">
-  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/v8/assets/dateview.png" width="250" alt="Date view"/>
-  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/v8/assets/monthview.png" width="250" alt="Date view"/>
-  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/v8/assets/yearview.png" width="250" alt="Date view"/>
+  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/assets/dateview.png" width="250" alt="Date view"/>
+  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/assets/monthview.png" width="250" alt="Date view"/>
+  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/assets/yearview.png" width="250" alt="Date view"/>
   <br/><br/>
 </p>
 
@@ -15,14 +15,14 @@ A modern date picker for react library. (Now customizable) . Built using [React]
 
 
 <p float="left">
-  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/v8/assets/screen1.png" width="250" alt="Date view"/>
-  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/v8/assets/screen2.png" width="250" alt="Date view"/>
-  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/v8/assets/screen3.png" width="250" alt="Date view"/>
-  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/v8/assets/screen4.png" width="250" alt="Date view"/>
-  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/v8/assets/screen5.png" width="250" alt="Date view"/>
-  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/v8/assets/screen6.png" width="250" alt="Date view"/>
-  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/v8/assets/screen7.png" width="250" alt="Date view"/>
-  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/v8/assets/screen8.png" width="250" alt="Date view"/>
+  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/assets/screen1.png" width="250" alt="Date view"/>
+  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/assets/screen2.png" width="250" alt="Date view"/>
+  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/assets/screen3.png" width="250" alt="Date view"/>
+  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/assets/screen4.png" width="250" alt="Date view"/>
+  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/assets/screen5.png" width="250" alt="Date view"/>
+  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/assets/screen6.png" width="250" alt="Date view"/>
+  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/assets/screen7.png" width="250" alt="Date view"/>
+  <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/assets/screen8.png" width="250" alt="Date view"/>
   <br/><br/>
 </p>
 
