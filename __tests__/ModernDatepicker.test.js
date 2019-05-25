@@ -3,7 +3,6 @@ import ModernDatepicker from '../build/components/ModernDatepicker';
 import renderer from 'react-test-renderer';
 import { mount, configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-// import moment from 'moment';
 import dayjs from "dayjs";
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import isBetween from 'dayjs/plugin/isBetween';
@@ -78,7 +77,7 @@ test('ModernDatepicker Component calls onChange when date is changed, javascript
   expect(onChange).toBeCalledWith(dayjs().date(20).month(5).year(2017).format('DD-MM-YYYY'));
 });
 
-test('ModernDatepicker Component calls onChange when date is changed, moment date object is passed', () => {
+test('ModernDatepicker Component calls onChange when date is changed, dayjs date object is passed', () => {
   const onChange = jest.fn();
   const wrapper = shallow(
     <ModernDatepicker 
@@ -206,7 +205,7 @@ test('ModernDatepicker Component calls onChange when date is changed, invalid mi
   expect(componentInstance.checkAndReturnDate()).toEqual('Invalid max/min date');
 });
 
-test('ModernDatepicker Component calls onChange when date is changed, moment date object, moment max date object & moment min date object is passed', () => {
+test('ModernDatepicker Component calls onChange when date is changed, dayjs date object, dayjs max date object & dayjs min date object is passed', () => {
   const onChange = jest.fn();
   const wrapper = shallow(
     <ModernDatepicker 
