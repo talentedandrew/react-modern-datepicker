@@ -1,10 +1,12 @@
 # react-modern-datepicker
 A modern date picker for react library. (Now customizable)
 
-<img align="left" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/dateview.jpg?sanitize=true&raw=true" alt="Date view" title="Angular" hspace="20"/>
-<img align="left" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/monthview.jpg?sanitize=true&raw=true" alt="Month View" title="Bootstrap" hspace="20"/>
-<img align="left" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/yearview.jpg?sanitize=true&raw=true" title="Year View" hspace="20"/>
+<p float="left">
+  <img align="center" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/dateview.jpg?sanitize=true&raw=true" alt="Date view"/>
+<img align="center" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/monthview.jpg?sanitize=true&raw=true" alt="Month View" />
 <br/><br/><br/><br/><br/>
+</p>
+
 
 <!-- ![react-modern-datepicker](https://github.com/talentedandrew/react-modern-datepicker/blob/master/dateview.jpg "react-modern-datepicker date view")
 
