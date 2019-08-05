@@ -45,7 +45,7 @@ class Example extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			startDate: '',
+			startDate: new Date(), // can be any of these ['dayjs()', '', null, new Date(2018,12,1)]
 		};
 		this.handleChange = this.handleChange.bind(this);
 	}
@@ -91,7 +91,7 @@ class Example extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			startDate: dayjs(),
+			startDate: new Date(), // can be any of these ['dayjs()', '', null, new Date(2018,12,1)]
 		};
 		this.handleChange = this.handleChange.bind(this);
 	}
@@ -111,8 +111,8 @@ class Example extends React.Component {
 				className="color"
 				id="someId"
 				icon={icon}
-				maxDate={dayjs().add('1', 'day')}
-				minDate={dayjs().subtract('2', 'day')}
+				maxDate={dayjs().add('1', 'day')} // can be a javascript date object also (new Date(2018,12,12))
+				minDate={dayjs().subtract('2', 'day')}// can be a javascript date object also (new Date(2018,12,1))
 				onChange={date => this.handleChange(date)}
 				placeholder={'Select a date'}
 				primaryColor={'#d9b44a'}
@@ -260,7 +260,7 @@ The following are the props that you can pass to `ModernDatepicker` Component :
 
 | props              |   Default    | Optional | Description                                                                                                         |
 | ------------------ | :----------: | -------- | ------------------------------------------------------------------------------------------------------------------- |
-| date               |     null     | true     | This prop takes the date that you want to show, in string format or as an instance of dayjs                                                                     |
+| date               |     null     | true     | This prop takes the date that you want to show, in string format, a javascript date object(new Date()) or as an instance of dayjs                                                                     |
 | format             | 'DD-MM-YYYY' | true     | This prop takes the format you want to set for your date                                                            |
 | showBorder         |    false     | true     | This prop takes a boolean to show or not to show borders around the input                                           |
 | onChange           |     null     | false    | This props takes a function, with the date passed to its parameters                                                 |
