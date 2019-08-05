@@ -1,6 +1,6 @@
 # react-modern-datepicker
 
-[![npm (scoped)](https://img.shields.io/badge/npm-v1.0.0-success.svg)](https://www.npmjs.com/package/react-modern-datepicker)
+[![npm (scoped)](https://img.shields.io/badge/npm-v1.1.0-success.svg)](https://www.npmjs.com/package/react-modern-datepicker)
 
 A modern date picker for react library. (Now customizable) . Built using [React](https://github.com/facebook/react), [Dayjs](https://github.com/iamkun/dayjs) and [styled-components](https://github.com/styled-components/styled-components)
 
