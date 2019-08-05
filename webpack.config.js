@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-
 module.exports = {
 	mode: 'production',
 	entry: './lib/index.js',
@@ -23,6 +22,10 @@ module.exports = {
 			},
 		],
 	},
+	// optimization: {
+	// 	// We no not want to minimize our code.
+	// 	minimize: false
+	// },
 	externals: {
 		react: {
 			root: 'React',
@@ -38,6 +41,10 @@ module.exports = {
 		},
 	},
 	plugins: [
-		new BundleAnalyzerPlugin(),
+		new BundleAnalyzerPlugin({
+			analyzerMode: 'static',
+			generateStatsFile: false,
+			reportFilename: path.resolve(__dirname, 'report', 'report.html')
+		}),
 	],
 };
