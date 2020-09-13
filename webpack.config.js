@@ -22,10 +22,10 @@ module.exports = {
 			},
 		],
 	},
-	// optimization: {
-	// 	// We no not want to minimize our code.
-	// 	minimize: false
-	// },
+	optimization: {
+		// We no not want to minimize our code.
+		minimize: false
+	},
 	externals: {
 		react: {
 			root: 'React',
