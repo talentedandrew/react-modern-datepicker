@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">62.34% </span>
+        <span class="strong">60.76% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>96/154</span>
+        <span class='fraction'>96/158</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">53.47% </span>
+        <span class="strong">51.61% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>208/389</span>
+        <span class='fraction'>208/403</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">37.04% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>10/27</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">61.84% </span>
+        <span class="strong">60.26% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>94/152</span>
+        <span class='fraction'>94/156</span>
       </div>
     </div>
     <p class="quiet">
@@ -422,7 +422,11 @@
 <a name='L374'></a><a href='#L374'>374</a>
 <a name='L375'></a><a href='#L375'>375</a>
 <a name='L376'></a><a href='#L376'>376</a>
-<a name='L377'></a><a href='#L377'>377</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L377'></a><a href='#L377'>377</a>
+<a name='L378'></a><a href='#L378'>378</a>
+<a name='L379'></a><a href='#L379'>379</a>
+<a name='L380'></a><a href='#L380'>380</a>
+<a name='L381'></a><a href='#L381'>381</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -629,6 +633,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -1006,10 +1014,14 @@ class ModernDatepicker extends Component {
 &nbsp;
 <span class="fstat-no" title="function not covered" >  on</span>DateEnter(e) {
 <span class="cstat-no" title="statement not covered" >    e.preventDefault();</span>
-    const {format, onChange} = <span class="cstat-no" title="statement not covered" >this.props;</span>
+    const {format, onChange, maxDate, minDate} = <span class="cstat-no" title="statement not covered" >this.props;</span>
     const { yearBlock } = <span class="cstat-no" title="statement not covered" >this.state;</span>
     const textDate = <span class="cstat-no" title="statement not covered" >e.target.value;</span>
-<span class="cstat-no" title="statement not covered" >    if(dayjs(textDate, format || 'DD-MM-YYYY').isValid()){</span>
+    const [, isMaxInstanceOfDate, isMinInstanceOfDate] = <span class="cstat-no" title="statement not covered" >this.checkDateInstance();</span>
+    const _date = <span class="cstat-no" title="statement not covered" >dayjs(textDate, format || 'DD-MM-YYYY');</span>
+    const _minDate = <span class="cstat-no" title="statement not covered" >isMinInstanceOfDate ? dayjs(minDate) : dayjs(minDate, format || 'DD-MM-YYYY');</span>
+    const _maxDate = <span class="cstat-no" title="statement not covered" >isMaxInstanceOfDate ? dayjs(maxDate) : dayjs(maxDate, format || 'DD-MM-YYYY');</span>
+<span class="cstat-no" title="statement not covered" >    if(_date.isValid() &amp;&amp; _date.isBetween(minDate ? _minDate.clone().subtract(1, 'day') : _date.clone().subtract(1, 'day'), maxDate ? _maxDate.clone().add(1, 'day') : _date.clone().add(1, 'day')) ){</span>
       const date = <span class="cstat-no" title="statement not covered" >dayjs(textDate, format || 'DD-MM-YYYY').format(format || 'DD-MM-YYYY');</span>
       const year = <span class="cstat-no" title="statement not covered" >dayjs(textDate, format || 'DD-MM-YYYY').get('year');</span>
       const newYearBlock = <span class="cstat-no" title="statement not covered" >this.getNewYearBlock(yearBlock, year);</span>
@@ -1068,7 +1080,7 @@ class ModernDatepicker extends Component {
           placeholder={placeholder}
           showBorder={showBorder}
           type="text"
-          value={allowEdit ? (<span class="branch-0 cbranch-no" title="branch not covered" >textDate || value)</span> : value}
+          value={allowEdit ? (<span class="branch-0 cbranch-no" title="branch not covered" >isValid ? textDate : value)</span> : value}
         /&gt;
         {icon &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;Icon</span>
           className={iconClass}
@@ -1180,7 +1192,7 @@ export default ModernDatepicker;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Sep 21 2019 13:20:25 GMT+0530 (India Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Sep 21 2020 23:24:57 GMT+0530 (India Standard Time)
 </div>
 </div>
 <script src="../prettify.js"></script>
