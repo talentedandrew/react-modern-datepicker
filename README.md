@@ -4,13 +4,17 @@
 
 A modern date picker for react library. (Now customizable) . Built using [React](https://github.com/facebook/react), [Dayjs](https://github.com/iamkun/dayjs) and [styled-components](https://github.com/styled-components/styled-components)
 
+
+<img align="center" src="https://user-images.githubusercontent.com/15646138/62488741-b47b9280-b7e2-11e9-967c-04c0a2494bb1.gif" alt="Date view"/>
+
+
 <p float="left">
   <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/assets/dateview.png" width="250" alt="Date view"/>
   <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/assets/monthview.png" width="250" alt="Date view"/>
   <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/assets/yearview.png" width="250" alt="Date view"/>
   <br/><br/>
 
-  <img align="center" hspace="10" vspace="10" src="https://user-images.githubusercontent.com/15646138/62488741-b47b9280-b7e2-11e9-967c-04c0a2494bb1.gif" width="250" alt="Date view"/>
+  
 </p>
 
 ## Customizable
