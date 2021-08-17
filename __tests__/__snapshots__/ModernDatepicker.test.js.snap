@@ -2,11 +2,11 @@
 
 exports[`ModernDatepicker component ModernDatepicker: renders correctly 1`] = `
 <div
-  className="sc-bxivhb hPEdlB"
+  className="Container-sc-crzztr-0 furIyG"
   onBlur={[Function]}
 >
   <input
-    className="sc-bwzfXH kGGIis"
+    className="Input__DInput-sc-12thhga-0 lmpcCT"
     onChange={[Function]}
     onFocus={[Function]}
     placeholder="Select a date"
