@@ -2,6 +2,7 @@
   "name": "react-modern-datepicker",
   "version": "1.1.0",
   "description": "A modern date picker for react library",
+  "homepage": "https://github.com/talentedandrew/react-modern-datepicker#readme",
   "main": "dist/main.js",
   "scripts": {
     "test": "jest",
@@ -29,7 +30,9 @@
   "bugs": {
     "url": "https://github.com/talentedandrew/react-modern-datepicker/issues"
   },
-  "homepage": "https://github.com/talentedandrew/react-modern-datepicker#readme",
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.4.5",
@@ -37,25 +40,26 @@
     "@babel/preset-react": "^7.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^9.0.0",
-    "babel-jest": "^24.8.0",
+    "babel-jest": "^27.0.6",
     "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.13.2",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.1",
     "eslint": "^4.19.1",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.14.3",
-    "eslint-watch": "^3.1.5",
-    "jest": "^24.8.0",
+    "eslint-watch": "^7.0.0",
+    "jest": "^27.0.6",
     "polished": "^1.9.3",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-addons-test-utils": "^15.6.2",
     "react-dom": "^16.8.6",
     "react-test-renderer": "^16.8.6",
-    "webpack": "^4.32.2",
+    "webpack": "^5.50.0",
     "webpack-bundle-analyzer": "^3.3.2",
-    "webpack-cli": "^3.3.2"
+    "webpack-cli": "^4.8.0"
   },
   "peerDependencies": {
     "react": "^16.8.6",
