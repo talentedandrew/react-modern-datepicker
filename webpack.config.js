@@ -7,8 +7,10 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'main.js',
-		library: 'ModernDatepicker',
-		libraryTarget: 'umd',
+		library: {
+			name: 'ReactModernDatepicker',
+			type: 'umd',
+		},
 		globalObject: 'this'
 	},
 	module: {
@@ -22,10 +24,10 @@ module.exports = {
 			},
 		],
 	},
-	// optimization: {
-	// 	// We no not want to minimize our code.
-	// 	minimize: false
-	// },
+	optimization: {
+		// We no not want to minimize our code.
+		minimize: false
+	},
 	externals: {
 		react: {
 			root: 'React',

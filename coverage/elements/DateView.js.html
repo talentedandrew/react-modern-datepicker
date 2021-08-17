@@ -1,51 +1,62 @@
+
 <!doctype html>
 <html lang="en">
+
 <head>
     <title>Code coverage report for elements/DateView.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
             background-image: url(../sort-arrow-sprite.png);
         }
     </style>
 </head>
+    
 <body>
 <div class='wrapper'>
-  <div class='pad1'>
-    <h1>
-      <a href="../index.html">All files</a> / <a href="index.html">elements</a> DateView.js
-    </h1>
-    <div class='clearfix'>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">20% </span>
-        <span class="quiet">Statements</span>
-        <span class='fraction'>10/50</span>
-      </div>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
-        <span class="quiet">Branches</span>
-        <span class='fraction'>0/82</span>
-      </div>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
-        <span class="quiet">Functions</span>
-        <span class='fraction'>0/14</span>
-      </div>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">21.74% </span>
-        <span class="quiet">Lines</span>
-        <span class='fraction'>10/46</span>
-      </div>
+    <div class='pad1'>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">elements</a> DateView.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">20% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>10/50</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/83</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/14</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">21.74% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>10/46</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
     </div>
-    <p class="quiet">
-      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
-    </p>
-  </div>
-  <div class='status-line low'></div>
-<pre><table class="coverage">
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
 <a name='L3'></a><a href='#L3'>3</a>
@@ -346,8 +357,8 @@ dayjs.extend(isSameOrBefore);
 &nbsp;
 const DSpan = styled(Span)`
   height:30px;
-  line-height: 30px; 
-  margin: 0; 
+  line-height: 30px;
+  margin: 0;
   pointer-events : ${<span class="fstat-no" title="function not covered" >pr</span>ops =&gt; <span class="cstat-no" title="statement not covered" >props.isMax || props.isMin ? 'none' : 'auto'}</span>;
   cursor : ${<span class="fstat-no" title="function not covered" >pr</span>ops =&gt; <span class="cstat-no" title="statement not covered" >props.isMax || props.isMin  ? 'default' : 'pointer'}</span>;
   background-color:${<span class="fstat-no" title="function not covered" >pr</span>ops =&gt;<span class="cstat-no" title="statement not covered" >props.isMax || props.isMin  ? "#eee" : props.secondaryColor}</span>;
@@ -358,7 +369,7 @@ const SelectedSpan = styled(Span)`
   background-color:${<span class="fstat-no" title="function not covered" >pr</span>ops =&gt; <span class="cstat-no" title="statement not covered" >props.primaryColor}</span>;
   color : ${<span class="fstat-no" title="function not covered" >pr</span>ops =&gt; <span class="cstat-no" title="statement not covered" >props.isMax || props.isMin  ? props.primaryTextColor : props.secondaryTextColor}</span>;
   height:30px;
-  line-height: 30px; 
+  line-height: 30px;
   margin: 0;
   opacity:${<span class="fstat-no" title="function not covered" >pr</span>ops =&gt; <span class="cstat-no" title="statement not covered" >props.isMax || props.isMin  ? '0.4' : '1'}</span>;
 `;
@@ -379,27 +390,27 @@ const DateView = <span class="fstat-no" title="function not covered" >pr</span>o
   const { date, format, onDateChange, maxDate, minDate, primaryColor, secondaryColor, primaryTextColor, secondaryTextColor } = <span class="cstat-no" title="statement not covered" >props;</span>
   const _date = <span class="cstat-no" title="statement not covered" >dayjs(date || dayjs().format(format || 'DD-MM-YYYY'), format || 'DD-MM-YYYY');</span>
   const _minDate = <span class="cstat-no" title="statement not covered" >dayjs(minDate, format || 'DD-MM-YYYY');</span>
-  const _maxDate = <span class="cstat-no" title="statement not covered" >dayjs(maxDate, format || 'DD-MM-YYYY'); </span>
+  const _maxDate = <span class="cstat-no" title="statement not covered" >dayjs(maxDate, format || 'DD-MM-YYYY');</span>
   const defaultDate = <span class="cstat-no" title="statement not covered" >_date.isBetween( minDate ? _minDate.clone().subtract(1, 'day') : _date.clone().subtract(1, 'day'), maxDate ? _maxDate.clone().add(1, 'day') : _date.clone().add(1, 'day')) ? _date : maxDate &amp;&amp; _maxDate.isSameOrAfter(_date) ? _date : minDate &amp;&amp; _minDate.isSameOrBefore(_date)  ? _minDate : maxDate ? _maxDate.clone().subtract(1, 'day') : minDate ? _minDate.clone().add(1, 'day') : _date;</span>
-  const mainDate = <span class="cstat-no" title="statement not covered" >date ? dayjs(date, format || 'DD-MM-YYYY')  : defaultDate; </span>
+  const mainDate = <span class="cstat-no" title="statement not covered" >date ? dayjs(date, format || 'DD-MM-YYYY')  : defaultDate;</span>
   const endDate = <span class="cstat-no" title="statement not covered" >maxDate ? dayjs(maxDate, format || 'DD-MM-YYYY') : null;</span>
   const startDate = <span class="cstat-no" title="statement not covered" >minDate ? dayjs(minDate, format || 'DD-MM-YYYY') : null;</span>
   const currentDate = <span class="cstat-no" title="statement not covered" >mainDate.get('date');</span>
   const days = <span class="cstat-no" title="statement not covered" >mainDate.daysInMonth(5);</span>
   const daysToAdd = <span class="cstat-no" title="statement not covered" >Number(mainDate.startOf('month').format('d'));</span>
-  let daysArray = <span class="cstat-no" title="statement not covered" >[];  </span>
-<span class="cstat-no" title="statement not covered" >  for (let i = <span class="cstat-no" title="statement not covered" >1;</span> i &lt;= days; i++) {  </span>
-<span class="cstat-no" title="statement not covered" >    daysArray[i-1] = { </span>
-      d : i , 
+  let daysArray = <span class="cstat-no" title="statement not covered" >[];</span>
+<span class="cstat-no" title="statement not covered" >  for (let i = <span class="cstat-no" title="statement not covered" >1;</span> i &lt;= days; i++) {</span>
+<span class="cstat-no" title="statement not covered" >    daysArray[i-1] = {</span>
+      d : i ,
       isMax : endDate ? mainDate.startOf('day').date(i).isAfter(endDate) : false ,
       isMin : startDate ? mainDate.startOf('day').date(i).isBefore(startDate) : false
-    };  
-  }  
-  let extraDaysArray = <span class="cstat-no" title="statement not covered" >[];  </span>
-<span class="cstat-no" title="statement not covered" >  for (let i = <span class="cstat-no" title="statement not covered" >0;</span> i &lt; daysToAdd; i++) {  </span>
-<span class="cstat-no" title="statement not covered" >    extraDaysArray[i] = 0;  </span>
+    };
   }
-  const totalDays =  <span class="cstat-no" title="statement not covered" >extraDaysArray.concat(daysArray); </span>
+  let extraDaysArray = <span class="cstat-no" title="statement not covered" >[];</span>
+<span class="cstat-no" title="statement not covered" >  for (let i = <span class="cstat-no" title="statement not covered" >0;</span> i &lt; daysToAdd; i++) {</span>
+<span class="cstat-no" title="statement not covered" >    extraDaysArray[i] = 0;</span>
+  }
+  const totalDays =  <span class="cstat-no" title="statement not covered" >extraDaysArray.concat(daysArray);</span>
   let d = <span class="cstat-no" title="statement not covered" >[];</span>
   let chunk = <span class="cstat-no" title="statement not covered" >7;</span>
 <span class="cstat-no" title="statement not covered" >  for (let i=<span class="cstat-no" title="statement not covered" >0,</span>j=<span class="cstat-no" title="statement not covered" >totalDays.length;</span> i&lt;j; i+=chunk) {</span>
@@ -428,11 +439,11 @@ const DateView = <span class="fstat-no" title="function not covered" >pr</span>o
                 primaryColor={primaryColor}
                 primaryTextColor={primaryTextColor}
                 secondaryTextColor={secondaryTextColor}
-                                                    &gt;{day ? day.d : ''}&lt;/SelectedSpan&gt; : &lt;DSpan 
+                                                    &gt;{day ? day.d : ''}&lt;/SelectedSpan&gt; : &lt;DSpan
                 isMax={day.isMax}
                 isMin={day.isMin}
                 key={i}
-                onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >!d.isMax &amp;&amp; !day.isMin &amp;&amp; onDateChange(day.d)}</span>
+                onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >day &amp;&amp; !d.isMax &amp;&amp; !day.isMin &amp;&amp; onDateChange(day.d)}</span>
                 primaryColor={primaryColor}
                 primaryTextColor={primaryTextColor}
                 secondaryColor={secondaryColor}
@@ -440,7 +451,7 @@ const DateView = <span class="fstat-no" title="function not covered" >pr</span>o
             );})}
           &lt;/Body&gt;
         );
-      })}    
+      })}
     &lt;/Wrapper&gt;
   );
 };
@@ -466,24 +477,24 @@ DateView.propTypes = {
   secondaryTextColor: PropTypes.string
 };
 export default DateView;
-&nbsp;</pre></td></tr>
-</table></pre>
-<div class='push'></div><!-- for sticky footer -->
-</div><!-- /wrapper -->
-<div class='footer quiet pad2 space-top1 center small'>
-  Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Aug 05 2019 22:51:50 GMT+0530 (India Standard Time)
-</div>
-</div>
-<script src="../prettify.js"></script>
-<script>
-window.onload = function () {
-        if (typeof prettyPrint === 'function') {
-            prettyPrint();
-        }
-};
-</script>
-<script src="../sorter.js"></script>
-<script src="../block-navigation.js"></script>
-</body>
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue Aug 17 2021 10:45:00 GMT+0530 (India Standard Time)
+            </div>
+        </div>
+        <script src="../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../sorter.js"></script>
+        <script src="../block-navigation.js"></script>
+    </body>
 </html>
+    
