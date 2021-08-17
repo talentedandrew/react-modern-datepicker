@@ -1,6 +1,6 @@
 # react-modern-datepicker
 
-[![npm (scoped)](https://img.shields.io/badge/npm-v1.1.0-success.svg)](https://www.npmjs.com/package/react-modern-datepicker)
+[![npm (scoped)](https://img.shields.io/badge/npm-v1.2.0-success.svg)](https://www.npmjs.com/package/react-modern-datepicker)
 
 A modern date picker for react library. (Now customizable) . Built using [React](https://github.com/facebook/react), [Dayjs](https://github.com/iamkun/dayjs) and [styled-components](https://github.com/styled-components/styled-components)
 
@@ -9,6 +9,8 @@ A modern date picker for react library. (Now customizable) . Built using [React]
   <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/assets/monthview.png" width="250" alt="Date view"/>
   <img align="center" hspace="5" vspace="5" src="https://raw.githubusercontent.com/talentedandrew/react-modern-datepicker/master/assets/yearview.png" width="250" alt="Date view"/>
   <br/><br/>
+
+  <img align="center" hspace="10" vspace="10" src="https://user-images.githubusercontent.com/15646138/62488741-b47b9280-b7e2-11e9-967c-04c0a2494bb1.gif" width="250" alt="Date view"/>
 </p>
 
 ## Customizable
@@ -108,6 +110,7 @@ class Example extends React.Component {
 				date={this.state.startDate}
 				format={'DD-MM-YYYY'}
 				showBorder
+				allowEdit
 				className="color"
 				id="someId"
 				icon={icon}
@@ -225,6 +228,7 @@ class Example extends React.Component {
 				date={this.state.startDate}
 				format={'DD-MM-YYYY'}
 				showBorder
+				allowEdit
 				className="color"
 				id="someId"
 				icon={icon}
@@ -263,6 +267,7 @@ The following are the props that you can pass to `ModernDatepicker` Component :
 | date               |     null     | true     | This prop takes the date that you want to show, in string format, a javascript date object(new Date()) or as an instance of dayjs                                                                     |
 | format             | 'DD-MM-YYYY' | true     | This prop takes the format you want to set for your date                                                            |
 | showBorder         |    false     | true     | This prop takes a boolean to show or not to show borders around the input                                           |
+| allowEdit         |    false     | true     | This prop takes a boolean to edit the input field manually                                          |
 | onChange           |     null     | false    | This props takes a function, with the date passed to its parameters                                                 |
 | placeholder        |     null     | true     | This props takes a string to show when no date is selected                                                          |
 | className          |     null     | true     | This props takes any external css/scss you want to use to override the default one.                                 |
